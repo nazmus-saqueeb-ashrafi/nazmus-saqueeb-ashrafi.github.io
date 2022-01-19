@@ -22,7 +22,7 @@ Modern react uses functional components. In making this color chosser applicatio
 
 
 ```javascript
-# The App.js main component
+// The App.js main component
 function App() {
  
   return (
