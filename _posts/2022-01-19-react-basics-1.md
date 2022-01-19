@@ -21,6 +21,25 @@ Modern react uses functional components. In making this color chosser applicatio
 - The Input component
 
 
+```javascript
+# The App.js main component
+function App() {
+ 
+  return (
+    
+    <div className="App">
+      
+      <Box color={color}/>
+      <Input onChange={onChange} color={color} />
+      
+    </div>
+  );
+}
+
+export default App;
+```
+
+
 
 ## useState hook
 
