@@ -29,14 +29,57 @@ function App() {
     
     <div className="App">
       
-      <Box color={color}/>
-      <Input onChange={onChange} color={color} />
+      <Box />
+      <Input />
       
     </div>
   );
 }
 
 export default App;
+```
+
+```javascript
+// The Input component
+import React from 'react';
+
+const Input = () => {
+  return (
+    <input
+      autoFocus
+      placeholder='Enter color here'
+      
+      
+    />
+  )
+};
+
+export default Input;
+```
+
+```javascript
+// The Box component
+
+const Box = () => {
+
+  return (
+    <div>
+      <div style={{
+          margin:'auto',
+          width:'500px',
+          height:'100px',
+          border:'1px solid #000',
+          textAlign: 'center',
+          backgroundColor: color
+      }}></div>
+
+    </div>
+    
+  )
+  
+};
+
+export default Box;
 ```
 
 
