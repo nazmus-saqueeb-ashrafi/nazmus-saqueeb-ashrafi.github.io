@@ -165,8 +165,6 @@ export default App;
 
 ```javascript
 
-import React from 'react';
-
 const Input = ({onChange, color}) => {
   return (
     <input
