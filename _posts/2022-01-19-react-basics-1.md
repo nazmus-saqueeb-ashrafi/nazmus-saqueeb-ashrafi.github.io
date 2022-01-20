@@ -45,7 +45,6 @@ export default App;
 
 ```javascript
 // The Input component
-import React from 'react';
 
 const Input = () => {
   return (
