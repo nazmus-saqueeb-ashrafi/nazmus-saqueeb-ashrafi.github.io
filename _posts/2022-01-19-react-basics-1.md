@@ -67,14 +67,14 @@ const Box = () => {
 
   return (
     <div>
-      <div style={{
+      <div style={
           margin:'auto',
           width:'500px',
           height:'100px',
           border:'1px solid #000',
           textAlign: 'center',
           backgroundColor: green
-      }}></div>
+      }></div>
 
     </div>
     
@@ -187,14 +187,14 @@ const Box = ({color}) => {
     
   return (
     <div>
-      <div style={{
+      <div style={
           margin:'auto',
           width:'500px',
           height:'100px',
           border:'1px solid #000',
           textAlign: 'center',
           backgroundColor: color
-      }}>{color?color:"This is empty"}</div>
+      }>{color?color:"This is empty"}</div>
 
     </div>
     
