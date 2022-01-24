@@ -4,11 +4,16 @@ title: "React basics 1"
 categories: technical
 ---
 
+<<<<<<< HEAD:\_posts/2022-01-24-react-basics-1.md
 ![Color Choser](/assets/images/colorchoser.png)
+=======
+![Color Choser](/assets/images/colorchoser.jpg)
+
+> > > > > > > 04173ca3fed19f51a428619c0193e15e4a78a86a:\_posts/2022-01-19-react-basics-1.md
 
 This article will discuss some of the core features of React. I have managed to get a grasp of few concepts within React by making a simple application (A color choser). This article will describe the concepts by explaining how the app was made.
 
-There are four concepts which will be described in this article:
+There are four concepts which will be discussed in this article:
 
 - React functional components
 - useState hook
@@ -101,7 +106,7 @@ function App() {
 export default App;
 ```
 
-## Prop drilling and controlled input
+## Controlled input and prop drilling
 
 The useState hook and onChange function will be written in the main App.js component which acts as the parent component in our app. We will drill these properties down to our children components. This way the Box and Input components can use the useState hook and onChange function.
 
