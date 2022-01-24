@@ -4,7 +4,7 @@ title: "React basics 1"
 categories: technical
 ---
 
-![Color Choser](/assets/images/colorchoser.jpg)
+![Color Choser](/assets/images/colorchoser.png)
 
 This article will discuss some of the core features of React. I have managed to get a grasp of few concepts within React by making a simple application (A color choser). This article will describe the concepts by explaining how the app was made.
 
