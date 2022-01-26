@@ -17,7 +17,7 @@ There are four concepts which will be discussed in this article:
 
 ## React functional components
 
-Modern react uses functional components. In making this color choser application, two components are used which are being imported to the App.js main component. These components are:
+Modern React uses functional components. In making this color choser application, two components are used which are being imported to the App.js main component. These components are:
 
 - The Box component
 - The Input component
