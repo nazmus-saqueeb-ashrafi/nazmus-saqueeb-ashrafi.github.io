@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Blogs"
+  url: https://nazmusashrafi.github.io/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
@@ -11,5 +13,4 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 
-  - title: "Blogs"
-  url: https://nazmusashrafi.github.io/
+  
