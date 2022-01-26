@@ -1,14 +1,10 @@
 # main links
 main:
-  # - title: "Blogs"
-  # url: https://nazmusashrafi.github.io/
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  #- title: "Home"
+  #  url: https://mariomeissner.github.io/
+
+  - title: "Technical"
+    url: /technical/
+
+  # - title: "Life"
+  #   url: /life/
