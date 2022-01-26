@@ -15,7 +15,7 @@ We will learn about the concepts above by creating a simple app that fetches dat
 
 ## useEffect hook and fetching data from an API
 
-We use this hook to execute functionality whenever a state is changed. By default the hook is set to execute functionality when the page loads, by we can change that based on when we want the functionality to execute.
+We use a useEffect hook to execute functionality whenever a state is changed. By default the hook is set to execute functionality when the page loads, but we can change that based on what event we want to happen for the functionality to execute.
 
 ```javascript
 // This content is in App.js

@@ -11,5 +11,5 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 
-    - title: "Blogs"
-    url: /
+  - title: "Blogs"
+  url: https://nazmusashrafi.github.io/
