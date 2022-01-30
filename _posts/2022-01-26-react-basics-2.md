@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "React basics 2"
+title: "React basics 2 - useEffect and fetch"
 categories: technical
 ---
 

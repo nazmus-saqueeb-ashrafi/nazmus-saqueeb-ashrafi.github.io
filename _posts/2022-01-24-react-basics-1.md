@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "React basics 1"
+title: "React basics 1 - useState and prop drilling"
 categories: technical
 ---
 
