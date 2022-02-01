@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "React basics 3 - React Router v6 routing, Context API and useParams"
+title: "React basics 3 - React Router v6 routing, Context API, useParams, Search functionality"
 categories: technical
 ---
 
