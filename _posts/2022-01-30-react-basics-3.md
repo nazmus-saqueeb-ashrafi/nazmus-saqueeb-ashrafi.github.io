@@ -1,16 +1,17 @@
 ---
 layout: single
-title: "React basics 3 - React Router v6 routing ,context API and useParams"
+title: "React basics 3 - React Router v6 routing, Context API and useParams"
 categories: technical
 ---
 
 ![Color Choser](/assets/images/routerandcontext.png)
 
-Welcome to part 3 of my article on React basics. In this part we are going to learn about 3 concepts in React. Namely:
+Welcome to part 3 of my article on React basics. In this part we are going to learn about more concepts in React. Namely:
 
 - React Router v6
 - Context API
 - useParams
+- Implement search functionality
 
 As usual I will attempt to explain things with the help of a simple app. This app consists of a navigation bar with 3 links which always stays on the page. The links utilizes React Router and so the switch between the links is lightning fast. We are also going to use the context API to generate the posts when the home link is clicked. The footer component is also always present on the page.
 
@@ -233,4 +234,70 @@ const PostPage = () => {
 };
 
 export default PostPage;
+```
+
+## Implement search functionality
+
+In this part we are going to modify our app to inclue search functionality. As we are using the context API as the one true source of data in our app, our first step will be to include states required by the search functionality in our DataContext.js file.
+
+```javascript
+// DataContext.js
+const [search, setSearch] = useState("");
+const [searchResults, setSearchResults] = useState([]);
+```
+
+Next we will create an input in our Nav component. The input will be a [controlled input](https://nazmusashrafi.github.io/technical/react-basics-1/#controlled-input-and-prop-drilling) which will will be changing our search state. The Nav component will get the search and setSearch state from the DataContext.
+
+```javascript
+// Nav.js
+
+const {search,setSearch} = useContext(DataContext)
+
+<input
+  type="text"
+  value={search}
+  onChange={(e)=>{
+    setSearch(e.target.value)
+  }}
+/>
+
+```
+
+Next up, we write a useEffect which filters our result depending on what we searched for each time the search or posts state changes. We also set the searchResult state to our filtered results.
+
+```javascript
+// DataContext.js
+
+useEffect(() => {
+  const filteredResults = posts.filter(
+    (post) =>
+      post.body.toLowerCase().includes(search.toLowerCase()) ||
+      post.title.toLowerCase().includes(search.toLowerCase())
+  );
+
+  setSearchResults(filteredResults.reverse());
+  // we use revese to show the newest posts first
+}, [posts, search]);
+```
+
+Lastly we change what the Home.js file maps because we want this mapping to change based on our search. We no longer use posts to map, now we use searchResults to map.
+
+```javascript
+// Home.js
+const { searchResults } = useContext(DataContext);
+
+return (
+  <div>
+    {searchResults.map((post) => {
+      return (
+        <div>
+          <Link to={`/post/${post.id}`}>
+            <h1>{post.title}</h1>
+          </Link>
+          <p>{post.datetime}</p>
+        </div>
+      );
+    })}
+  </div>
+);
 ```
