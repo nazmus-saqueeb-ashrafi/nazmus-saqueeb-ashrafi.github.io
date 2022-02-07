@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "MERN Project 1 - How to setup project folder and push to git repository"
+title: "MERN Project 1 - How to setup project folder, push to git repository, setting up routes"
 categories: MERN project
 ---
 
