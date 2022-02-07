@@ -13,7 +13,13 @@ Hello. Welcome to this article which will be a guide for making a MERN stack app
 - Run 'npm init'
   - set 'server.js' as entry point
   - this will create a 'package.json' in the root
-- Create a '.gitignore' file in the root and include 'node_modules' and '.env' in it.
+- Create a '.gitignore' file in the root and include
+
+```.gitignore
+node_modules
+.env
+```
+
 - Run 'npm i express dotenv mongoose colors'
 - Run 'npm i -D nodemon'
 - Run these scripts in 'package.json'
@@ -50,7 +56,7 @@ app.listen(port, () => console.log(`Server started on port ${port}`))
 
 - Create the .env
 
-```env
+```.env
 
 NODE_ENV = development
 PORT = 5000
