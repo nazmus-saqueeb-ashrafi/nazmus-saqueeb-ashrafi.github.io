@@ -35,6 +35,8 @@ node_modules
 
 And voila, you are all done setting up.
 
+## Setting up routes
+
 - Now in the 'server.js' file, we will listen for a port and set up a pointer to out routes.
 
 ```javascript
@@ -52,10 +54,19 @@ app.use("/api/posts", require(".routes/postRoutes"));
 app.listen(port, () => console.log(`Server started on port ${port}`));
 ```
 
+- Create the .env
+
+```.env;
+
+NODE_ENV = development;
+PORT = 5000;
+```
+
 - create a folder named 'routes' and a file named 'postRoutes.js' in it.
   We keep our routes seperated from the 'server.js' file because we want to keep our routes in an organized fashion.
 
 ```javascript
+//routes/postRoutes.js
 const express = require("express");
 const router = express.Router();
 
@@ -74,14 +85,6 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   res.status(200).json({ message: `delete post ${req.params.id}` });
 });
-```
-
-- Create the .env
-
-```.env;
-
-NODE_ENV = development;
-PORT = 5000;
 ```
 
 - Next we can use a http client like Postman to access our route. Just use the GET,POST,PUT,DELETE request 'http://localhost:5000/api/posts'.
