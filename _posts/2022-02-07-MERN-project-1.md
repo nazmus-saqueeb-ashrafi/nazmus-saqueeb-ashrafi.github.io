@@ -35,35 +35,56 @@ node_modules
 
 And voila, you are all done setting up.
 
-- Now in the 'server.js' file, we will listen for a port and set up out first route.
+- Now in the 'server.js' file, we will listen for a port and set up a pointer to out routes.
 
 ```javascript
-const express = require('express')
-const dotenv = require('dotenv').config()
-const port = process.env.PORT || 5000
+// server.js
+const express = require("express");
+const dotenv = require("dotenv").config();
+const port = process.env.PORT || 5000;
 
-const app = express()
+const app = express();
 
-// our first route
-app.get('/api/post',(req,res)) => {
-  res.json({ message:'hello world'})
-}
-
+// our route pointer
+app.use("/api/posts", require(".routes/postRoutes"));
 
 // listening
-app.listen(port, () => console.log(`Server started on port ${port}`))
+app.listen(port, () => console.log(`Server started on port ${port}`));
+```
+
+- create a folder named 'routes' and a file named 'postRoutes.js' in it.
+  We keep our routes seperated from the 'server.js' file because we want to keep our routes in an organized fashion.
+
+```javascript
+const express = require("express");
+const router = express.Router();
+
+router.get("/", (req, res) => {
+  res.status(200).json({ message: "get post" });
+});
+
+router.post("/", (req, res) => {
+  res.status(200).json({ message: "set post" });
+});
+
+router.put("/:id", (req, res) => {
+  res.status(200).json({ message: `update post ${req.params.id}` });
+});
+
+router.delete("/:id", (req, res) => {
+  res.status(200).json({ message: `delete post ${req.params.id}` });
+});
 ```
 
 - Create the .env
 
-```.env
+```.env;
 
-NODE_ENV = development
-PORT = 5000
-
+NODE_ENV = development;
+PORT = 5000;
 ```
 
-- Next we can use a http client like postman to access our route. Just use the GET request 'http://localhost:5000/api/post'.
+- Next we can use a http client like Postman to access our route. Just use the GET,POST,PUT,DELETE request 'http://localhost:5000/api/posts'.
 
 ## Git repository
 
