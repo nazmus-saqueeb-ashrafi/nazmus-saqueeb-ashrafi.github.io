@@ -1,10 +1,12 @@
 ---
 layout: single
-title: "MERN Project 1 - How to setup project folder, push to git repository, setting up routes"
+title: "MERN Project 1 - Setup project folder, setting up routes, push to git repository"
 categories: MERN project
 ---
 
-Hello. Welcome to this article which will be a guide for making a MERN stack application. In this first part we will learn how to setup an a project folder with some of the dependencies need to initialize the project. Just follow the steps.
+Hello. Welcome to this article which will be a guide for making a MERN stack application.
+
+In this first part we will learn how to setup an a project folder with some of the dependencies needed to initialize the project. We will also learn hoe to set up routes and push the project to a git repository.
 
 ## Setup
 
@@ -21,7 +23,7 @@ node_modules
 ```
 
 - Run 'npm i express dotenv mongoose colors'
-- Run 'npm i -D nodemon'
+- Run 'npm i -D nodemon' to install nodemon as a dev dependency
 - Run these scripts in 'package.json'
 
 ```json
@@ -40,15 +42,15 @@ And voila, you are all done setting up.
 - Now in the 'server.js' file, we will listen for a port and set up a pointer to out routes.
 
 ```javascript
-// server.js
+// backend/server.js
 const express = require("express");
 const dotenv = require("dotenv").config();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
 // our route pointer
-app.use("/api/posts", require(".routes/postRoutes"));
+app.use("/api/posts", require("./routes/postRoutes"));
 
 // listening
 app.listen(port, () => console.log(`Server started on port ${port}`));
@@ -58,17 +60,19 @@ app.listen(port, () => console.log(`Server started on port ${port}`));
 
 ```.env;
 
-NODE_ENV = development;
-PORT = 5000;
+NODE_ENV = development
+PORT = 3000
 ```
 
 - create a folder named 'routes' and a file named 'postRoutes.js' in it.
   We keep our routes seperated from the 'server.js' file because we want to keep our routes in an organized fashion.
 
 ```javascript
-//routes/postRoutes.js
+// backend/routes/postRoutes.js
 const express = require("express");
 const router = express.Router();
+
+module.exports = router;
 
 router.get("/", (req, res) => {
   res.status(200).json({ message: "get post" });
