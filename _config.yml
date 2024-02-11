@@ -106,7 +106,7 @@ author:
   name: "Nazmus Ashrafi"
   avatar: "/assets/images/profileImg.jpeg"
   # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "Software Engineering Student"
+  bio: ""
   location: "Dhaka, Bangladesh"
   email:
   links:
@@ -124,7 +124,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/NazmusAshrafi"
+      # url: "https://github.com/NazmusAshrafi"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
